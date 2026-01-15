@@ -9,9 +9,9 @@ export default function Logo() {
         <Image
           src="https://res.cloudinary.com/da8ptobvx/image/upload/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png"
           alt="IORBIT TECH SOLUTIONS LAB Logo"
-          width={50}
-          height={50}
-          className="object-contain w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
+          width={100}
+          height={100}
+          className="object-contain w-30 h-30 sm:w-12 sm:h-20 md:w-20 md:h-20"
         />
       </div>
 

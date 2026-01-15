@@ -106,8 +106,8 @@ export default function Hero() {
               <Image
                 src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                 alt="AI and Data Science Innovation"
-                width={900}
-                height={650}
+                width={700}
+                height={500}
                 className="rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl border border-white/20 hover-lift w-full h-auto"
                 priority
               />
