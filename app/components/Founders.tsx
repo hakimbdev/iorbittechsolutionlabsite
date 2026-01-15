@@ -7,7 +7,7 @@ import { Linkedin, Twitter, Github } from "lucide-react"
 const founders = [
   {
     name: "Abdulhakim Ahmad",
-    title: "CEO",
+    title: "Founder & Lead Technologist",
     description:
       "Former AI Expert at Google DeepMind with 15+ years in artificial intelligence and machine learning.",
     image:

@@ -148,7 +148,7 @@ export default function OurStory() {
               {[
                 {
                   name: "Abdulhakim Ahmad",
-                  position: "CEO",
+                  position: "Founder & Lead Technologist",
                   image: "https://res.cloudinary.com/dc5qncppu/image/upload/v1749308419/image0_1_qmhfmk.jpg"
                 },
                 {

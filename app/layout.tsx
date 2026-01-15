@@ -8,7 +8,7 @@ import Chatbot from './components/Chatbot'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'IORBIT LAB Africa',
+  title: 'IORBIT TECH SOLUTIONS LAB',
   description: 'A software agency specializing in Cybersecurity, Data Analysis, and Software Engineering solutions for forward-thinking brands. Partnership Services for Marketing Digital Products & Services.',
   icons: {
     icon: [
@@ -56,7 +56,7 @@ export default function RootLayout({
             <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">IORBIT LAB Africa</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">IORBIT TECH SOLUTIONS LAB</h3>
                   <p className="mt-4 text-sm text-gray-600 dark:text-gray-300">
                     A software agency specializing in Cybersecurity, Data Analysis, and Software Engineering solutions for forward-thinking brands.
                   </p>
@@ -85,7 +85,7 @@ export default function RootLayout({
                     </li>
                     <li>
                       <a href="/robotics" className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">
-                        World of Robotics
+                        World of AI
                       </a>
                     </li>
                     <li>
@@ -137,7 +137,7 @@ export default function RootLayout({
               </div>
               <div className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-8">
                 <p className="text-center text-sm text-gray-600 dark:text-gray-300">
-                  © {new Date().getFullYear()} IORBIT LAB Africa. All rights reserved.
+                  © {new Date().getFullYear()} IORBIT TECH SOLUTIONS LAB. All rights reserved.
                 </p>
               </div>
             </div>

@@ -15,10 +15,10 @@ export default function About() {
         {/* Header Section - Mobile Optimized */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 px-2">
-            About IORBIT LAB Africa
+            About IORBIT TECH SOLUTIONS LAB
           </h2>
           <p className="text-base sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed px-2">
-            Founded in 2019 and incorporated in 2025, IORBIT LAB Africa (also known as iOrbit Tech Solutions Lab) has been at the forefront of artificial intelligence innovation, helping
+            Founded in 2019 and incorporated in 2025, IORBIT TECH SOLUTIONS LAB (also known as iOrbit Tech Solutions Lab) has been at the forefront of artificial intelligence innovation, helping
             brands transform their operations through cutting-edge technology solutions.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function About() {
 
           {/* Why Choose Us */}
           <div className="bg-white/10 rounded-lg p-6 sm:p-8 hover:bg-white/15 transition-colors duration-300">
-            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Why Choose IORBIT LAB Africa?</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Why Choose IORBIT TECH SOLUTIONS LAB?</h3>
             <ul className="space-y-3 sm:space-y-4">
               <li className="flex items-start">
                 <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>

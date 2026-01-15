@@ -77,7 +77,7 @@ export default function RoboticsPage() {
           <div className="text-center">
             <Bot className="mx-auto h-16 w-16 mb-6" />
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              World of Robotics
+              World of AI
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-xl text-purple-100">
               Exploring the cutting-edge intersection of artificial intelligence, robotics, and autonomous systems that are reshaping our world.
@@ -198,7 +198,7 @@ export default function RoboticsPage() {
               Future of Robotics
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              IORBIT LAB Africa is at the forefront of robotics innovation, developing solutions that will transform industries and improve lives across the continent and beyond.
+              IORBIT TECH SOLUTIONS LAB is at the forefront of robotics innovation, developing solutions that will transform industries and improve lives across the continent and beyond.
             </p>
           </div>
           
@@ -231,14 +231,14 @@ export default function RoboticsPage() {
           </div>
         </div>
 
-        {/* IORBIT LAB Africa's Role */}
+        {/* IORBIT TECH SOLUTIONS LAB's Role */}
         <div className="mt-16 text-center">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-            IORBIT LAB Africa's Robotics Vision
+            IORBIT TECH SOLUTIONS LAB's Robotics Vision
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-              As a leading technology company in Africa, IORBIT LAB Africa is committed to advancing robotics and AI technologies that address real-world challenges. From cybersecurity for robotic systems to developing autonomous solutions for African markets, we're building the future of intelligent automation.
+              As a leading technology company in Africa, IORBIT TECH SOLUTIONS LAB is committed to advancing robotics and AI technologies that address real-world challenges. From cybersecurity for robotic systems to developing autonomous solutions for African markets, we're building the future of intelligent automation.
             </p>
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">

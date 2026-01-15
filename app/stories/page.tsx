@@ -11,7 +11,7 @@ const gitexStories = [
     title: "GITEX Tech Event 2025 - Abuja",
     location: "Abuja, Nigeria",
     date: "2025",
-    description: "IORBIT LAB Africa's participation in the prestigious GITEX Tech Event, showcasing our cybersecurity and software engineering solutions.",
+    description: "IORBIT TECH SOLUTIONS LAB's participation in the prestigious GITEX Tech Event, showcasing our cybersecurity and software engineering solutions.",
     image: "https://res.cloudinary.com/da8ptobvx/image/upload/v1758051492/1000003726_wk5z8i.jpg",
     category: "Tech Event"
   },
@@ -126,7 +126,7 @@ export default function StoriesPage() {
               Our Stories
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-xl text-blue-100">
-              Discover IORBIT LAB Africa's journey through major tech events, partnerships, and innovations that shape the future of technology in Africa.
+              Discover IORBIT TECH SOLUTIONS LAB's journey through major tech events, partnerships, and innovations that shape the future of technology in Africa.
             </p>
           </div>
         </div>
@@ -220,7 +220,7 @@ export default function StoriesPage() {
               GITEX 2025 Impact
             </h3>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              Our participation in GITEX Tech Event 2025 across Abuja and Victoria Island (Lagos) marked a significant milestone in IORBIT LAB Africa's journey. We showcased our cutting-edge cybersecurity solutions, demonstrated our data analysis capabilities, and established valuable partnerships that continue to drive innovation in the African tech ecosystem.
+              Our participation in GITEX Tech Event 2025 across Abuja and Victoria Island (Lagos) marked a significant milestone in IORBIT TECH SOLUTIONS LAB's journey. We showcased our cutting-edge cybersecurity solutions, demonstrated our data analysis capabilities, and established valuable partnerships that continue to drive innovation in the African tech ecosystem.
             </p>
             <div className="grid gap-6 sm:grid-cols-3 text-center">
               <div>

@@ -7,7 +7,7 @@ import { Github, Linkedin, Mail } from 'lucide-react'
 const founders = [
   {
     name: "Abdulhakim Ahmad",
-    role: "CEO",
+    role: "Founder & Lead Technologist",
     image: "https://res.cloudinary.com/dc5qncppu/image/upload/v1748265942/pp1_ek8kwj.jpg",
     bio: "Software Engineer with expertise in AI, React, Node.js, and cloud technologies. Passionate about creating innovative solutions and leading teams to success.",
     github: "https://github.com/hakimbdev",
