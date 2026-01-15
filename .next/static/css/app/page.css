@@ -1,0 +1,27 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@15.2.4_@opentelemetry+_781da0e2995b20161f5e96c361b4c12a/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/.pnpm/next@15.2.4_@opentelemetry+_781da0e2995b20161f5e96c361b4c12a/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./app/home.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@keyframes home_scroll__ToJ6i {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 2rem));
+  }
+}
+
+.home_sliderContainer__hEdR3 {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.home_sliderTrack__cQA4r {
+  animation: home_scroll__ToJ6i 20s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.home_sliderTrack__cQA4r:hover {
+  animation-play-state: paused;
+} 
