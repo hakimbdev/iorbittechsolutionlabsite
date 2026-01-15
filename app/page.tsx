@@ -54,7 +54,7 @@ export default function Home() {
         <div className="relative flex h-full items-center justify-center">
           <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
             <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl">
-              IORBIT LAB Africa
+              IORBIT TECH SOLUTIONS LAB
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-xl text-gray-200">
               A software agency specializing in Cybersecurity, Data Analysis, and Software Engineering solutions for forward-thinking brands. We also provide Partnership Services for Marketing Digital Products & Services.
@@ -141,40 +141,12 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Security & Compliance Section */}
-      <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/10 dark:to-orange-900/10 py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-              Security & Compliance First
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
-              Your data security and privacy are our top priorities. We maintain the highest standards of cybersecurity compliance.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/privacy-policy"
-                className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/cybersecurity-compliance"
-                className="inline-flex items-center justify-center rounded-md border border-red-600 bg-white px-6 py-3 text-base font-medium text-red-600 shadow-sm hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-colors duration-200 dark:bg-gray-800 dark:border-red-400 dark:text-red-400 dark:hover:bg-red-900/20"
-              >
-                Security Compliance
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Robotics Highlight Section */}
       <div className="bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/10 dark:to-indigo-900/10 py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-              World of Robotics
+              World of AI
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
               Explore cutting-edge robotics and AI innovations that are reshaping the future of technology
