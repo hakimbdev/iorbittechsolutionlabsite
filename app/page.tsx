@@ -128,8 +128,8 @@ export default function Home() {
             <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl">
               Iorbit Tech Solutions Lab
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-xl text-gray-200">
-              A software agency specializing in delivering Software Engineering solutions like Website Developments, Software Architecture, Building Organizational Email System, AI-powered Solutions, Product Design, 3D Animations and Video Creations for Advertisement, Odoo and Zoho Configurations for forward-thinking brands, Governmental Organizations, Non-Governmental Organizations and SMEs.
+            <p className="mt-4 text-lg text-white sm:text-xl">
+               Welcome to a Revolutionary Software Development Agency
             </p>
             <div className="mt-10 flex justify-center gap-4">
               <Link
