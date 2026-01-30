@@ -49,7 +49,21 @@ const partners = [
     logo: "https://res.cloudinary.com/dc5qncppu/image/upload/v1748459510/AI_Everything_Germany_pfllsg.png",
     description: "AI Innovation Partner"
   },
-
+  {
+    name: "Queen Amina Medical Integration",
+    logo: "https://res.cloudinary.com/da8ptobvx/image/upload/v1769775153/Queen_Amina_Medical_Integration_gou5yl.png",
+    description: "Healthcare Technology Partner"
+  },
+  {
+    name: "Trash2Cash",
+    logo: "https://res.cloudinary.com/da8ptobvx/image/upload/v1769775153/eTrash2Cash_lu5kbg.png",
+    description: "Environmental Technology Partner"
+  },
+  {
+    name: "Profit2People",
+    logo: "https://res.cloudinary.com/da8ptobvx/image/upload/v1769776946/Profit2People_z9ube0.png",
+    description: "Social Impact Partner"
+  },
 ]
 
 export default function Home() {
