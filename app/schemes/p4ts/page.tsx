@@ -60,7 +60,7 @@ export default function P4TSPage() {
             About the Program
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            The Plastic For Tech Skills (P4TS) initiative is IORBIT TECH SOLUTIONS LAB's innovative program that addresses two critical challenges: environmental sustainability and digital skills gap. By collecting plastic waste, participants earn credits toward professional technology training programs.
+            The Plastic For Tech Skills (P4TS) initiative is Iorbit Tech Solutions Lab's innovative program that addresses two critical challenges: environmental sustainability and digital skills gap. By collecting plastic waste, participants earn credits toward professional technology training programs.
           </p>
         </div>
 

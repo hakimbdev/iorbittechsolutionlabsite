@@ -68,7 +68,7 @@ export default function S4ISPage() {
             About the Sponsorship
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            The Skills For Impact Sponsorship (S4IS) program is IORBIT TECH SOLUTIONS LAB's commitment to social responsibility and inclusive growth. We provide full scholarships to talented individuals who lack financial resources but possess the passion and potential to excel in technology careers.
+            The Skills For Impact Sponsorship (S4IS) program is Iorbit Tech Solutions Lab's commitment to social responsibility and inclusive growth. We provide full scholarships to talented individuals who lack financial resources but possess the passion and potential to excel in technology careers.
           </p>
         </div>
 

@@ -8,7 +8,7 @@ import Chatbot from './components/Chatbot'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'IORBIT TECH SOLUTIONS LAB',
+  title: 'Iorbit Tech Solutions Lab',
   description: 'A software agency specializing in delivering Software Engineering solutions like Website Developments, Software Architecture, Building Organizational Email System, AI-powered Solutions, Product Design, 3D Animations and Video Creations for Advertisement, Odoo and Zoho Configurations for forward-thinking brands, Governmental Organizations, Non-Governmental Organizations and SMEs.',
   icons: {
     icon: [
@@ -83,7 +83,7 @@ export default function RootLayout({
             <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">IORBIT TECH SOLUTIONS LAB</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Iorbit Tech Solutions Lab</h3>
                   <p className="mt-4 text-sm text-gray-600 dark:text-gray-300">
                     A software agency specializing in delivering Software Engineering solutions like Website Developments, Software Architecture, Building Organizational Email System, AI-powered Solutions, Product Design, 3D Animations and Video Creations for Advertisement, Odoo and Zoho Configurations for forward-thinking brands, Governmental Organizations, Non-Governmental Organizations and SMEs.
                   </p>
@@ -164,7 +164,7 @@ export default function RootLayout({
               </div>
               <div className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-8">
                 <p className="text-center text-sm text-gray-600 dark:text-gray-300">
-                  © {new Date().getFullYear()} IORBIT TECH SOLUTIONS LAB. All rights reserved.
+                  © {new Date().getFullYear()} Iorbit Tech Solutions Lab. All rights reserved.
                 </p>
               </div>
             </div>

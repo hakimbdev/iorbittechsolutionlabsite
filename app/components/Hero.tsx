@@ -3,10 +3,34 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { ArrowRight, Sparkles, Zap, Target, Play } from "lucide-react"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useCallback } from "react"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
+const heroImages = [
+  {
+    url: "https://res.cloudinary.com/dc5qncppu/image/upload/v1769758117/1769320988542_bqo3zj.png",
+    alt: "Iorbit Tech Solutions Lab - Innovation 1"
+  },
+  {
+    url: "https://res.cloudinary.com/dc5qncppu/image/upload/v1769758090/1769321003418_cmjo5z.png",
+    alt: "Iorbit Tech Solutions Lab - Innovation 2"
+  },
+  {
+    url: "https://res.cloudinary.com/dc5qncppu/image/upload/v1769756149/ChatGPT_Image_Jan_29_2026_07_49_47_AM_hdnizt.png",
+    alt: "Iorbit Tech Solutions Lab - Innovation 3"
+  }
+]
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [api, setApi] = useState<any>()
+  const [current, setCurrent] = useState(0)
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -15,6 +39,31 @@ export default function Hero() {
     window.addEventListener("mousemove", handleMouseMove)
     return () => window.removeEventListener("mousemove", handleMouseMove)
   }, [])
+
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCurrent(api.selectedScrollSnap())
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap())
+    })
+  }, [api])
+
+  // Auto-play functionality
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    const autoplay = setInterval(() => {
+      api.scrollNext()
+    }, 4000) // Change slide every 4 seconds
+
+    return () => clearInterval(autoplay)
+  }, [api])
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 lg:pt-32">
@@ -53,7 +102,7 @@ export default function Hero() {
           {/* Main Heading - Mobile Responsive */}
           <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 sm:mb-8 leading-tight text-white">
             <span className="block">Welcome to</span>
-            <span className="gradient-text-animated text-shadow block">IORBIT TECH SOLUTIONS LAB</span>
+            <span className="gradient-text-animated text-shadow block">Iorbit Tech Solutions Lab</span>
             <span className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl block mt-2">Africa</span>
           </h1>
 
@@ -94,30 +143,67 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Side - 3D Image - Mobile Responsive */}
+        {/* Right Side - Modern Slider - Mobile Responsive */}
         <div className="lg:w-1/2 animate-slide-in-right perspective-1000 w-full max-w-lg mx-auto lg:mx-0">
-          <div className="relative transform-style-3d hover:rotate-y-12 transition-transform duration-700 px-4 sm:px-0">
+          <div className="relative px-4 sm:px-0">
             {/* Glow Effect - Reduced on mobile */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 rounded-2xl sm:rounded-3xl blur-2xl sm:blur-3xl opacity-30 sm:opacity-40 animate-pulse-slow"></div>
 
-            {/* Main Image - Mobile Responsive */}
+            {/* Carousel Slider */}
             <div className="relative">
-              <Image
-                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                alt="AI and Data Science Innovation"
-                width={700}
-                height={500}
-                className="rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl border border-white/20 hover-lift w-full h-auto"
-                priority
-              />
+              <Carousel
+                setApi={setApi}
+                className="w-full"
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+              >
+                <CarouselContent>
+                  {heroImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="relative">
+                        <Image
+                          src={image.url}
+                          alt={image.alt}
+                          width={700}
+                          height={500}
+                          className="rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl border border-white/20 w-full h-auto object-cover"
+                          priority={index === 0}
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+
+                {/* Navigation Arrows */}
+                <CarouselPrevious className="hidden sm:flex left-2 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm" />
+                <CarouselNext className="hidden sm:flex right-2 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm" />
+              </Carousel>
+
+              {/* Slide Indicators */}
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2">
+                {heroImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => api?.scrollTo(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      current === index
+                        ? "bg-white w-8"
+                        : "bg-white/40 hover:bg-white/60"
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
 
               {/* Floating Elements - Mobile Responsive */}
-              <div className="absolute -top-3 -right-3 sm:-top-6 sm:-right-6 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl sm:rounded-2xl flex items-center justify-center animate-float shadow-lg sm:shadow-xl">
+              <div className="absolute -top-3 -right-3 sm:-top-6 sm:-right-6 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl sm:rounded-2xl flex items-center justify-center animate-float shadow-lg sm:shadow-xl z-10">
                 <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" />
               </div>
 
               <div
-                className="absolute -bottom-3 -left-3 sm:-bottom-6 sm:-left-6 w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg sm:rounded-xl flex items-center justify-center animate-float shadow-lg sm:shadow-xl"
+                className="absolute -bottom-3 -left-3 sm:-bottom-6 sm:-left-6 w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg sm:rounded-xl flex items-center justify-center animate-float shadow-lg sm:shadow-xl z-10"
                 style={{ animationDelay: "1s" }}
               >
                 <Zap className="w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white" />

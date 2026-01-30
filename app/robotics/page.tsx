@@ -157,7 +157,7 @@ export default function RoboticsPage() {
               Future of AI
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              IORBIT TECH SOLUTIONS LAB is at the forefront of AI innovation, developing intelligent solutions that transform businesses and empower organizations across Africa and beyond.
+              Iorbit Tech Solutions Lab is at the forefront of AI innovation, developing intelligent solutions that transform businesses and empower organizations across Africa and beyond.
             </p>
           </div>
 
@@ -190,14 +190,14 @@ export default function RoboticsPage() {
           </div>
         </div>
 
-        {/* IORBIT TECH SOLUTIONS LAB's Role */}
+        {/* Iorbit Tech Solutions Lab's Role */}
         <div className="mt-16 text-center">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-            IORBIT TECH SOLUTIONS LAB's AI Vision
+            Iorbit Tech Solutions Lab's AI Vision
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-              As a leading technology company in Africa, IORBIT TECH SOLUTIONS LAB is committed to advancing AI and machine learning technologies that address real-world challenges. From developing intelligent automation solutions to building cutting-edge AI-powered applications, we're shaping the future of software intelligence.
+              As a leading technology company in Africa, Iorbit Tech Solutions Lab is committed to advancing AI and machine learning technologies that address real-world challenges. From developing intelligent automation solutions to building cutting-edge AI-powered applications, we're shaping the future of software intelligence.
             </p>
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">

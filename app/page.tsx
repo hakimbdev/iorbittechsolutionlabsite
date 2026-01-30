@@ -4,6 +4,29 @@ import Link from "next/link"
 import Image from 'next/image'
 import { Calendar } from 'lucide-react'
 import styles from './home.module.css'
+import { useEffect, useState } from 'react'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
+const heroImages = [
+  {
+    url: "https://res.cloudinary.com/dc5qncppu/image/upload/v1769758117/1769320988542_bqo3zj.png",
+    alt: "Iorbit Tech Solutions Lab - Innovation 1"
+  },
+  {
+    url: "https://res.cloudinary.com/dc5qncppu/image/upload/v1769758090/1769321003418_cmjo5z.png",
+    alt: "Iorbit Tech Solutions Lab - Innovation 2"
+  },
+  {
+    url: "https://res.cloudinary.com/dc5qncppu/image/upload/v1769756149/ChatGPT_Image_Jan_29_2026_07_49_47_AM_hdnizt.png",
+    alt: "Iorbit Tech Solutions Lab - Innovation 3"
+  }
+]
 
 const partners = [
   {
@@ -30,31 +53,80 @@ const partners = [
 ]
 
 export default function Home() {
+  const [api, setApi] = useState<any>()
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCurrent(api.selectedScrollSnap())
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap())
+    })
+  }, [api])
+
+  // Auto-play functionality
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    const autoplay = setInterval(() => {
+      api.scrollNext()
+    }, 5000) // Change slide every 5 seconds
+
+    return () => clearInterval(autoplay)
+  }, [api])
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      {/* Hero Section */}
-      <div className="relative h-screen w-full">
-        <div className="absolute inset-0">
-          <Image
-            src="https://res.cloudinary.com/dc5qncppu/image/upload/v1749319567/technology-human-touch-background-modern-remake-creation-adam_zdxm59.jpg"
-            alt="Technology background"
-            fill
-            priority
-            quality={100}
-            className="object-cover"
-            style={{
-              objectFit: 'cover',
-              objectPosition: 'center',
-              width: '100%',
-              height: '100%'
-            }}
-          />
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
-        <div className="relative flex h-full items-center justify-center">
-          <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+      {/* Hero Section with Slider */}
+      <div className="relative h-screen w-full overflow-hidden">
+        <Carousel
+          setApi={setApi}
+          className="h-full w-full"
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
+          <CarouselContent className="h-screen">
+            {heroImages.map((image, index) => (
+              <CarouselItem key={index} className="h-screen">
+                <div className="relative h-full w-full">
+                  <Image
+                    src={image.url}
+                    alt={image.alt}
+                    fill
+                    priority={index === 0}
+                    quality={100}
+                    className="object-cover"
+                    style={{
+                      objectFit: 'cover',
+                      objectPosition: 'center',
+                      width: '100%',
+                      height: '100%'
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/50" />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+          {/* Navigation Arrows */}
+          <CarouselPrevious className="left-4 h-12 w-12 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm" />
+          <CarouselNext className="right-4 h-12 w-12 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm" />
+        </Carousel>
+
+        {/* Content Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8 pointer-events-auto">
             <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl">
-              IORBIT TECH SOLUTIONS LAB
+              Iorbit Tech Solutions Lab
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-xl text-gray-200">
               A software agency specializing in delivering Software Engineering solutions like Website Developments, Software Architecture, Building Organizational Email System, AI-powered Solutions, Product Design, 3D Animations and Video Creations for Advertisement, Odoo and Zoho Configurations for forward-thinking brands, Governmental Organizations, Non-Governmental Organizations and SMEs.
@@ -74,6 +146,22 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </div>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3 z-10">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => api?.scrollTo(index)}
+              className={`h-3 rounded-full transition-all duration-300 ${
+                current === index
+                  ? "bg-white w-12"
+                  : "bg-white/50 hover:bg-white/75 w-3"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
 
