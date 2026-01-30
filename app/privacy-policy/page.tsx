@@ -241,7 +241,8 @@ export default function PrivacyPolicyPage() {
                   <p><strong>Data Protection Officer:</strong> privacy@iorbitlab.africa</p>
                   <p><strong>Security Team:</strong> security@iorbitlab.africa</p>
                   <p><strong>General Inquiries:</strong> info@iorbitlab.africa</p>
-                  <p><strong>Address:</strong> Suite 167 Gwarinpa, Abuja, Nigeria</p>
+                  <p><strong>Address 1:</strong> Suite 302A Bahamas Plaza, Gudu Area, FCT, Abuja, Nigeria</p>
+                  <p><strong>Address 2:</strong> Near DHL Office, Azare, Bauchi, Nigeria</p>
                   <p><strong>Phone:</strong> +234 80-6255-8567</p>
                 </div>
               </div>

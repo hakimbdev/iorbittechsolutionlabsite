@@ -157,7 +157,10 @@ export default function RootLayout({
                       Phone: +234 80-6255-8567
                     </li>
                     <li className="text-sm text-gray-600 dark:text-gray-300">
-                      Address: Suite 302A Bahamas Plaza, Gudu Area, FCT, Abuja, Nigeria.
+                      Address 1: Suite 302A Bahamas Plaza, Gudu Area, FCT, Abuja, Nigeria.
+                    </li>
+                    <li className="text-sm text-gray-600 dark:text-gray-300">
+                      Address 2: Near DHL Office, Azare, Bauchi, Nigeria.
                     </li>
                   </ul>
                 </div>
