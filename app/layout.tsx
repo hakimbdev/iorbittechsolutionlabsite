@@ -13,21 +13,41 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: 'https://res.cloudinary.com/da8ptobvx/image/upload/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png',
+        url: 'https://res.cloudinary.com/da8ptobvx/image/upload/w_16,h_16,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png',
+        sizes: '16x16',
+        type: 'image/png',
+      },
+      {
+        url: 'https://res.cloudinary.com/da8ptobvx/image/upload/w_32,h_32,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png',
         sizes: '32x32',
         type: 'image/png',
       },
       {
-        url: 'https://res.cloudinary.com/da8ptobvx/image/upload/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png',
-        sizes: '16x16',
+        url: 'https://res.cloudinary.com/da8ptobvx/image/upload/w_48,h_48,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png',
+        sizes: '48x48',
+        type: 'image/png',
+      },
+      {
+        url: 'https://res.cloudinary.com/da8ptobvx/image/upload/w_64,h_64,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png',
+        sizes: '64x64',
         type: 'image/png',
       },
     ],
-    shortcut: 'https://res.cloudinary.com/da8ptobvx/image/upload/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png',
+    shortcut: 'https://res.cloudinary.com/da8ptobvx/image/upload/w_32,h_32,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png',
     apple: [
       {
-        url: 'https://res.cloudinary.com/da8ptobvx/image/upload/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png',
+        url: 'https://res.cloudinary.com/da8ptobvx/image/upload/w_180,h_180,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png',
         sizes: '180x180',
+        type: 'image/png',
+      },
+      {
+        url: 'https://res.cloudinary.com/da8ptobvx/image/upload/w_152,h_152,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png',
+        sizes: '152x152',
+        type: 'image/png',
+      },
+      {
+        url: 'https://res.cloudinary.com/da8ptobvx/image/upload/w_120,h_120,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png',
+        sizes: '120x120',
         type: 'image/png',
       },
     ],
@@ -42,9 +62,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <head>
-        <link rel="icon" href="https://res.cloudinary.com/da8ptobvx/image/upload/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png" type="image/png" />
-        <link rel="apple-touch-icon" href="https://res.cloudinary.com/da8ptobvx/image/upload/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png" />
-        <link rel="shortcut icon" href="https://res.cloudinary.com/da8ptobvx/image/upload/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/da8ptobvx/image/upload/w_16,h_16,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/da8ptobvx/image/upload/w_32,h_32,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png" />
+        <link rel="icon" type="image/png" sizes="48x48" href="https://res.cloudinary.com/da8ptobvx/image/upload/w_48,h_48,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png" />
+        <link rel="icon" type="image/png" sizes="64x64" href="https://res.cloudinary.com/da8ptobvx/image/upload/w_64,h_64,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/da8ptobvx/image/upload/w_180,h_180,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://res.cloudinary.com/da8ptobvx/image/upload/w_152,h_152,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="https://res.cloudinary.com/da8ptobvx/image/upload/w_120,h_120,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png" />
+        <link rel="shortcut icon" href="https://res.cloudinary.com/da8ptobvx/image/upload/w_32,h_32,c_fill,q_auto,f_auto/v1758048165/Blue_Black_Modern_Business_Card-removebg-preview_gesfy3.png" />
+        <meta name="msapplication-TileColor" content="#2563eb" />
+        <meta name="theme-color" content="#ffffff" />
       </head>
       <body className={`${inter.className} h-full bg-gray-50 dark:bg-gray-900`}>
         <div className="min-h-full flex flex-col">

@@ -1,4 +1,4 @@
-import { Code, Database, Shield, Users } from 'lucide-react'
+import { Code, Database, Shield, Users, Palette } from 'lucide-react'
 
 const services = [
   {
@@ -35,6 +35,17 @@ const services = [
     ]
   },
   {
+    title: "Graphic Design",
+    description: "Creative visual design solutions that bring your brand to life with stunning graphics, compelling visuals, and professional design assets.",
+    icon: Palette,
+    features: [
+      "Brand identity & logo design",
+      "Marketing materials & collateral",
+      "UI/UX design",
+      "3D animations & video creation"
+    ]
+  },
+  {
     title: "Partnership Services",
     description: "Strategic marketing partnerships to help you launch, scale, and sustain digital products effectively in competitive markets.",
     icon: Users,
@@ -59,7 +70,7 @@ export default function ServicesPage() {
               Our Services
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-300">
-              Specialized solutions in Cybersecurity, Data Analysis, Software Engineering, and Partnership Services for forward-thinking brands
+              Specialized solutions in Cybersecurity, Data Analysis, Software Engineering, Graphic Design, and Partnership Services for forward-thinking brands
             </p>
           </div>
         </div>
