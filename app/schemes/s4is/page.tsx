@@ -72,6 +72,38 @@ export default function S4ISPage() {
           </p>
         </div>
 
+        {/* Program Objectives */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/10 dark:to-purple-900/10 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-6">
+              Program Objectives
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-8 max-w-3xl mx-auto">
+              The objectives of Skills For Impact Sponsorship pilot is to achieve the following within a 30 day period:
+            </p>
+            <div className="max-w-4xl mx-auto space-y-4">
+              <div className="flex items-start bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+                <CheckCircle className="h-6 w-6 text-blue-600 mr-4 mt-1 flex-shrink-0" />
+                <p className="text-lg text-gray-700 dark:text-gray-300">
+                  Provide paid, hands on work opportunities for youth with digital skills.
+                </p>
+              </div>
+              <div className="flex items-start bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+                <CheckCircle className="h-6 w-6 text-blue-600 mr-4 mt-1 flex-shrink-0" />
+                <p className="text-lg text-gray-700 dark:text-gray-300">
+                  Deploy trained workforce teams to deliver practical digital tools for schools and nonprofit organizations.
+                </p>
+              </div>
+              <div className="flex items-start bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+                <CheckCircle className="h-6 w-6 text-blue-600 mr-4 mt-1 flex-shrink-0" />
+                <p className="text-lg text-gray-700 dark:text-gray-300">
+                  Enable sponsors to achieve measurable social impact aligned with their Corporate Social Responsibility and Environmental Social Governance priorities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Program Pillars */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-8">

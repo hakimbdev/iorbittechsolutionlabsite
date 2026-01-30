@@ -1,5 +1,6 @@
 "use client"
 
+import Image from 'next/image'
 import { Recycle, Code, Users, Target, CheckCircle, ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -54,14 +55,32 @@ export default function P4TSPage() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        {/* Program Overview */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            About the Program
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            The Plastic For Tech Skills (P4TS) initiative is Iorbit Tech Solutions Lab's innovative program that addresses two critical challenges: environmental sustainability and digital skills gap. By collecting plastic waste, participants earn credits toward professional technology training programs.
-          </p>
+        {/* Program Overview with Image */}
+        <div className="mb-16">
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            {/* Image Section */}
+            <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="https://res.cloudinary.com/da8ptobvx/image/upload/v1769814635/ChatGPT_Image_Jan_29_2026_07_49_47_AM_flnnw1.png"
+                alt="Plastic For Tech Skills Program"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Content Section */}
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                About the Program
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                Plastic For Tech Skills (P4TS) Program bridges these two issues by allowing participants to exchange collected plastic waste for access to quality tech training.
+              </p>
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                This approach creates a sustainable, socially impactful, and environmentally conscious learning model.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Program Benefits */}
