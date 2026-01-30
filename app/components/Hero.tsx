@@ -59,8 +59,7 @@ export default function Hero() {
 
           {/* Subtitle - Mobile Responsive */}
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-10 text-blue-100 leading-relaxed max-w-2xl mx-auto lg:mx-0 px-2 sm:px-0">
-            A software agency specializing in Cybersecurity, Data Analysis, and Software Engineering solutions for forward-thinking brands.
-            Your partner in digital transformation and growth.
+            A software agency specializing in delivering Software Engineering solutions like Website Developments, Software Architecture, Building Organizational Email System, AI-powered Solutions, Product Design, 3D Animations and Video Creations for Advertisement, Odoo and Zoho Configurations for forward-thinking brands, Governmental Organizations, Non-Governmental Organizations and SMEs.
           </p>
 
           {/* CTA Buttons - Mobile Optimized */}

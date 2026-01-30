@@ -144,6 +144,24 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
   type __Unused = __Check
 }
 
+// Validate ../../app/schemes/p4ts/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/schemes/p4ts">> = Specific
+  const handler = {} as typeof import("../../app/schemes/p4ts/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/schemes/s4is/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/schemes/s4is">> = Specific
+  const handler = {} as typeof import("../../app/schemes/s4is/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/services/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/services">> = Specific

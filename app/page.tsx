@@ -57,7 +57,7 @@ export default function Home() {
               IORBIT TECH SOLUTIONS LAB
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-xl text-gray-200">
-              A software agency specializing in Cybersecurity, Data Analysis, and Software Engineering solutions for forward-thinking brands. We also provide Partnership Services for Marketing Digital Products & Services.
+              A software agency specializing in delivering Software Engineering solutions like Website Developments, Software Architecture, Building Organizational Email System, AI-powered Solutions, Product Design, 3D Animations and Video Creations for Advertisement, Odoo and Zoho Configurations for forward-thinking brands, Governmental Organizations, Non-Governmental Organizations and SMEs.
             </p>
             <div className="mt-10 flex justify-center gap-4">
               <Link

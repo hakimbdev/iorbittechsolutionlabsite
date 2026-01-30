@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'IORBIT TECH SOLUTIONS LAB',
-  description: 'A software agency specializing in Cybersecurity, Data Analysis, and Software Engineering solutions for forward-thinking brands. Partnership Services for Marketing Digital Products & Services.',
+  description: 'A software agency specializing in delivering Software Engineering solutions like Website Developments, Software Architecture, Building Organizational Email System, AI-powered Solutions, Product Design, 3D Animations and Video Creations for Advertisement, Odoo and Zoho Configurations for forward-thinking brands, Governmental Organizations, Non-Governmental Organizations and SMEs.',
   icons: {
     icon: [
       {
@@ -58,7 +58,7 @@ export default function RootLayout({
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">IORBIT TECH SOLUTIONS LAB</h3>
                   <p className="mt-4 text-sm text-gray-600 dark:text-gray-300">
-                    A software agency specializing in Cybersecurity, Data Analysis, and Software Engineering solutions for forward-thinking brands.
+                    A software agency specializing in delivering Software Engineering solutions like Website Developments, Software Architecture, Building Organizational Email System, AI-powered Solutions, Product Design, 3D Animations and Video Creations for Advertisement, Odoo and Zoho Configurations for forward-thinking brands, Governmental Organizations, Non-Governmental Organizations and SMEs.
                   </p>
                   <div className="mt-6 flex space-x-6">
                     <a href="#" className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 transition-colors duration-200">
@@ -124,13 +124,13 @@ export default function RootLayout({
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Contact</h3>
                   <ul className="mt-4 space-y-2">
                     <li className="text-sm text-gray-600 dark:text-gray-300">
-                      Email: info@iorbitlab.africa
+                      Email: clientsupport@iotsl.com.ng
                     </li>
                     <li className="text-sm text-gray-600 dark:text-gray-300">
                       Phone: +234 80-6255-8567
                     </li>
                     <li className="text-sm text-gray-600 dark:text-gray-300">
-                      Address: Suite 167 Gwarinpa, Abuja, Nigeria.
+                      Address: Suite 302A Bahamas Plaza, Gudu Area, FCT, Abuja, Nigeria.
                     </li>
                   </ul>
                 </div>

@@ -38,8 +38,8 @@ export default function ContactPage() {
                     Email
                   </h3>
                   <p className="mt-1 text-gray-600 dark:text-gray-300">
-                    <a href="mailto:contact@iorbit.tech" className="hover:text-blue-600">
-                      contact@iots.com
+                    <a href="mailto:clientsupport@iotsl.com.ng" className="hover:text-blue-600">
+                      clientsupport@iotsl.com.ng
                     </a>
                   </p>
                 </div>
@@ -70,9 +70,9 @@ export default function ContactPage() {
                     Location
                   </h3>
                   <p className="mt-1 text-gray-600 dark:text-gray-300">
-                    Suite 167 <br />
-                    Gwarinpa, Abuja<br />
-                    Nigeria
+                    Suite 302A Bahamas Plaza<br />
+                    Gudu Area, FCT<br />
+                    Abuja, Nigeria
                   </p>
                 </div>
               </div>
