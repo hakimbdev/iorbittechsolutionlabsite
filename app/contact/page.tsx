@@ -69,11 +69,24 @@ export default function ContactPage() {
                   <h3 className="text-lg font-medium text-gray-900 dark:text-white">
                     Location
                   </h3>
-                  <p className="mt-1 text-gray-600 dark:text-gray-300">
-                    Suite 302A Bahamas Plaza<br />
-                    Gudu Area, FCT<br />
-                    Abuja, Nigeria
-                  </p>
+                  <div className="mt-1 text-gray-600 dark:text-gray-300 space-y-4">
+                    <div>
+                      <p className="font-semibold text-gray-900 dark:text-white">Address 1:</p>
+                      <p>
+                        Suite 302A Bahamas Plaza<br />
+                        Gudu Area, FCT<br />
+                        Abuja, Nigeria
+                      </p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900 dark:text-white">Address 2:</p>
+                      <p>
+                        Near DHL Office<br />
+                        Azare, Bauchi<br />
+                        Nigeria
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
