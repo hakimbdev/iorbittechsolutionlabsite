@@ -5,28 +5,7 @@ import Image from 'next/image'
 import { Calendar } from 'lucide-react'
 import styles from './home.module.css'
 import { useEffect, useState } from 'react'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-
-const heroImages = [
-  {
-    url: "https://res.cloudinary.com/dc5qncppu/image/upload/v1769758117/1769320988542_bqo3zj.png",
-    alt: "Iorbit Tech Solutions Lab - Innovation 1"
-  },
-  {
-    url: "https://res.cloudinary.com/dc5qncppu/image/upload/v1769758090/1769321003418_cmjo5z.png",
-    alt: "Iorbit Tech Solutions Lab - Innovation 2"
-  },
-  {
-    url: "https://res.cloudinary.com/dc5qncppu/image/upload/v1769756149/ChatGPT_Image_Jan_29_2026_07_49_47_AM_hdnizt.png",
-    alt: "Iorbit Tech Solutions Lab - Innovation 3"
-  }
-]
+import Hero from './components/Hero'
 
 const partners = [
   {
@@ -67,113 +46,10 @@ const partners = [
 ]
 
 export default function Home() {
-  const [api, setApi] = useState<any>()
-  const [current, setCurrent] = useState(0)
-
-  useEffect(() => {
-    if (!api) {
-      return
-    }
-
-    setCurrent(api.selectedScrollSnap())
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap())
-    })
-  }, [api])
-
-  // Auto-play functionality
-  useEffect(() => {
-    if (!api) {
-      return
-    }
-
-    const autoplay = setInterval(() => {
-      api.scrollNext()
-    }, 5000) // Change slide every 5 seconds
-
-    return () => clearInterval(autoplay)
-  }, [api])
-
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      {/* Hero Section with Slider - Mobile Optimized */}
-      <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen w-full overflow-hidden">
-        {/* Carousel Background */}
-        <Carousel
-          setApi={setApi}
-          className="absolute inset-0"
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-        >
-          <CarouselContent className="h-full -ml-0">
-            {heroImages.map((image, index) => (
-              <CarouselItem key={index} className="h-full pl-0 basis-full">
-                <div className="relative h-full w-full">
-                  <Image
-                    src={image.url}
-                    alt={image.alt}
-                    fill
-                    priority={index === 0}
-                    quality={100}
-                    className="object-cover"
-                    sizes="100vw"
-                  />
-                  <div className="absolute inset-0 bg-black/50" />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-
-          {/* Navigation Arrows - Hidden on mobile */}
-          <CarouselPrevious className="hidden sm:flex left-2 sm:left-4 h-10 w-10 sm:h-12 sm:w-12 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm" />
-          <CarouselNext className="hidden sm:flex right-2 sm:right-4 h-10 w-10 sm:h-12 sm:w-12 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm" />
-        </Carousel>
-
-        {/* Content Overlay - Mobile Responsive */}
-        <div className="absolute inset-0 z-10 flex items-center justify-center px-4">
-          <div className="mx-auto max-w-7xl w-full text-center sm:px-6 lg:px-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white px-2">
-              Iorbit Tech Solutions Lab
-            </h1>
-            <p className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-white px-4 max-w-3xl mx-auto">
-               Welcome to a Revolutionary Software Development Agency
-            </p>
-            <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
-              <Link
-                href="/solutions"
-                className="rounded-md bg-blue-600 px-5 sm:px-6 py-2.5 sm:py-3 text-base sm:text-lg font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors touch-target"
-              >
-                Explore Solutions
-              </Link>
-              <Link
-                href="/case-studies"
-                className="rounded-md bg-white/10 px-5 sm:px-6 py-2.5 sm:py-3 text-base sm:text-lg font-semibold text-white backdrop-blur-sm hover:bg-white/20 transition-colors touch-target"
-              >
-                View Case Studies
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Slide Indicators - Mobile Optimized */}
-        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 sm:gap-3 z-20">
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => api?.scrollTo(index)}
-              className={`h-2 sm:h-3 rounded-full transition-all duration-300 touch-target ${
-                current === index
-                  ? "bg-white w-8 sm:w-12"
-                  : "bg-white/50 hover:bg-white/75 w-2 sm:w-3"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-      </div>
+      {/* Hero Section */}
+      <Hero />
 
       {/* Slider Section */}
       <div className="relative bg-white py-16 dark:bg-gray-800">

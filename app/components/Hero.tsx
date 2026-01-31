@@ -1,224 +1,145 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import { ArrowRight, Sparkles, Zap, Target, Play } from "lucide-react"
-import { useEffect, useState, useCallback } from "react"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+import { Button } from "@/components/ui/button"
+import { useEffect, useState } from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const heroImages = [
   {
     url: "https://res.cloudinary.com/dc5qncppu/image/upload/v1769758117/1769320988542_bqo3zj.png",
-    alt: "Iorbit Tech Solutions Lab - Innovation 1"
+    alt: "Iorbit Tech Solutions Lab - Community"
   },
   {
     url: "https://res.cloudinary.com/dc5qncppu/image/upload/v1769758090/1769321003418_cmjo5z.png",
-    alt: "Iorbit Tech Solutions Lab - Innovation 2"
+    alt: "Iorbit Tech Solutions Lab - Innovation"
   },
   {
     url: "https://res.cloudinary.com/dc5qncppu/image/upload/v1769756149/ChatGPT_Image_Jan_29_2026_07_49_47_AM_hdnizt.png",
-    alt: "Iorbit Tech Solutions Lab - Innovation 3"
+    alt: "Iorbit Tech Solutions Lab - Technology"
   }
 ]
 
 export default function Hero() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [api, setApi] = useState<any>()
   const [current, setCurrent] = useState(0)
+  const [autoPlay, setAutoPlay] = useState(true)
 
+  // Auto-play carousel
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
-    window.addEventListener("mousemove", handleMouseMove)
-    return () => window.removeEventListener("mousemove", handleMouseMove)
-  }, [])
+    if (!autoPlay) return
 
-  useEffect(() => {
-    if (!api) {
-      return
-    }
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % heroImages.length)
+    }, 6000)
 
-    setCurrent(api.selectedScrollSnap())
+    return () => clearInterval(timer)
+  }, [autoPlay])
 
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap())
-    })
-  }, [api])
+  const handlePrev = () => {
+    setCurrent((prev) => (prev - 1 + heroImages.length) % heroImages.length)
+    setAutoPlay(false)
+  }
 
-  // Auto-play functionality
-  useEffect(() => {
-    if (!api) {
-      return
-    }
+  const handleNext = () => {
+    setCurrent((prev) => (prev + 1) % heroImages.length)
+    setAutoPlay(false)
+  }
 
-    const autoplay = setInterval(() => {
-      api.scrollNext()
-    }, 4000) // Change slide every 4 seconds
-
-    return () => clearInterval(autoplay)
-  }, [api])
+  const goToSlide = (index: number) => {
+    setCurrent(index)
+    setAutoPlay(false)
+  }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 lg:pt-32">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-
-        {/* Floating Particles - Reduced for mobile performance */}
-        <div className="absolute inset-0 hidden sm:block">
-          {[...Array(30)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-blue-400 rounded-full animate-pulse-slow"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 4}s`,
-                animationDuration: `${3 + Math.random() * 4}s`,
-              }}
-            ></div>
-          ))}
-        </div>
-
-        {/* Interactive Glow Effect - Hidden on mobile for performance */}
-        <div
-          className="absolute w-96 h-96 bg-blue-500/20 rounded-full blur-3xl transition-all duration-300 hidden lg:block"
-          style={{
-            left: mousePosition.x - 192,
-            top: mousePosition.y - 192,
-          }}
-        ></div>
+    <section className="relative w-full h-screen overflow-hidden bg-black">
+      {/* Slider Images */}
+      <div className="relative w-full h-full">
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+              index === current ? "opacity-100 z-10" : "opacity-0 z-0"
+            }`}
+          >
+            <Image
+              src={image.url}
+              alt={image.alt}
+              fill
+              priority={index === 0}
+              className="w-full h-full object-cover"
+              sizes="100vw"
+              onMouseEnter={() => setAutoPlay(false)}
+              onMouseLeave={() => setAutoPlay(true)}
+            />
+          </div>
+        ))}
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center relative z-10">
-        <div className="lg:w-1/2 mb-8 sm:mb-12 lg:mb-0 animate-slide-in-left text-center lg:text-left">
-          {/* Main Heading - Mobile Responsive */}
-          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 sm:mb-8 leading-tight text-white">
-            <span className="block">Welcome to</span>
-            <span className="gradient-text-animated text-shadow block">Iorbit Tech Solutions Lab</span>
-            <span className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl block mt-2">Africa</span>
-          </h1>
+      {/* Gradient Overlay - Subtle for better visibility */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40 z-20"></div>
 
-          {/* Subtitle - Mobile Responsive */}
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-10 text-blue-100 leading-relaxed max-w-2xl mx-auto lg:mx-0 px-2 sm:px-0">
-            A software agency specializing in delivering Software Engineering solutions like Website Developments, Software Architecture, Building Organizational Email System, AI-powered Solutions, Product Design, 3D Animations and Video Creations for Advertisement, Odoo and Zoho Configurations for forward-thinking brands, Governmental Organizations, Non-Governmental Organizations and SMEs.
-          </p>
+      {/* Content Overlay */}
+      <div className="absolute inset-0 z-30 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8">
+        {/* Main Heading */}
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">
+          Iorbit Tech Solutions Lab
+        </h1>
 
-          {/* CTA Buttons - Mobile Optimized */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-8 sm:mb-12 px-4 sm:px-0">
-            <Button className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 sm:px-8 lg:px-10 py-4 sm:py-5 lg:py-6 text-base sm:text-lg font-bold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 neon-glow w-full sm:w-auto">
-              <Zap className="mr-2 sm:mr-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:animate-pulse" />
-              <span className="hidden xs:inline">Explore Our Services</span>
-              <span className="xs:hidden">Our Services</span>
-              <ArrowRight className="ml-2 sm:ml-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform duration-300" />
-            </Button>
-            <Button className="group bg-white/10 hover:bg-white/20 text-white border border-white/30 px-6 sm:px-8 lg:px-10 py-4 sm:py-5 lg:py-6 text-base sm:text-lg font-bold shadow-2xl backdrop-blur-sm transition-all duration-300 w-full sm:w-auto">
-              <Play className="mr-2 sm:mr-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:animate-pulse" />
-              Watch Demo
-            </Button>
-          </div>
+        {/* Subtitle */}
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-10 text-white/95 leading-relaxed max-w-3xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] font-medium">
+          Experience the Revolutionary Software Development Agency
+        </p>
 
-          {/* Stats - Mobile Responsive Grid */}
-          <div className="grid grid-cols-1 xs:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-md xs:max-w-none mx-auto lg:mx-0">
-            {[
-              { number: "500+", label: "Tech Solutions", icon: Target },
-              { number: "98%", label: "Client Satisfaction", icon: Zap },
-              { number: "100+", label: "Global Partners", icon: Sparkles },
-            ].map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="flex items-center justify-center mb-1 sm:mb-2">
-                  <stat.icon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-blue-400 mr-1 sm:mr-2 group-hover:animate-pulse" />
-                  <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-white">{stat.number}</div>
-                </div>
-                <div className="text-blue-200 text-xs sm:text-sm font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Right Side - Modern Slider - Mobile Responsive */}
-        <div className="lg:w-1/2 animate-slide-in-right perspective-1000 w-full max-w-lg mx-auto lg:mx-0">
-          <div className="relative px-4 sm:px-0">
-            {/* Glow Effect - Reduced on mobile */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 rounded-2xl sm:rounded-3xl blur-2xl sm:blur-3xl opacity-30 sm:opacity-40 animate-pulse-slow"></div>
-
-            {/* Carousel Slider */}
-            <div className="relative">
-              <Carousel
-                setApi={setApi}
-                className="w-full"
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-              >
-                <CarouselContent>
-                  {heroImages.map((image, index) => (
-                    <CarouselItem key={index}>
-                      <div className="relative">
-                        <Image
-                          src={image.url}
-                          alt={image.alt}
-                          width={700}
-                          height={500}
-                          className="rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl border border-white/20 w-full h-auto object-cover"
-                          priority={index === 0}
-                        />
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-
-                {/* Navigation Arrows */}
-                <CarouselPrevious className="hidden sm:flex left-2 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm" />
-                <CarouselNext className="hidden sm:flex right-2 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm" />
-              </Carousel>
-
-              {/* Slide Indicators */}
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2">
-                {heroImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => api?.scrollTo(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      current === index
-                        ? "bg-white w-8"
-                        : "bg-white/40 hover:bg-white/60"
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
-
-              {/* Floating Elements - Mobile Responsive */}
-              <div className="absolute -top-3 -right-3 sm:-top-6 sm:-right-6 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl sm:rounded-2xl flex items-center justify-center animate-float shadow-lg sm:shadow-xl z-10">
-                <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" />
-              </div>
-
-              <div
-                className="absolute -bottom-3 -left-3 sm:-bottom-6 sm:-left-6 w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg sm:rounded-xl flex items-center justify-center animate-float shadow-lg sm:shadow-xl z-10"
-                style={{ animationDelay: "1s" }}
-              >
-                <Zap className="w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white" />
-              </div>
-            </div>
-          </div>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-10 sm:px-12 py-4 sm:py-5 text-lg font-bold rounded-lg shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 w-full sm:w-auto">
+            Explore Solutions
+          </Button>
+          <Button className="bg-gray-900/90 hover:bg-gray-950 text-white px-10 sm:px-12 py-4 sm:py-5 text-lg font-bold rounded-lg shadow-2xl border border-gray-700 backdrop-blur-md transition-all duration-300 w-full sm:w-auto">
+            View Case Studies
+          </Button>
         </div>
       </div>
 
-      {/* Scroll Indicator - Mobile Responsive */}
-      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 sm:w-8 sm:h-12 border-2 border-white/40 rounded-full flex justify-center backdrop-blur-sm">
-          <div className="w-1 h-3 sm:w-1.5 sm:h-4 bg-white rounded-full mt-1.5 sm:mt-2 animate-pulse"></div>
+      {/* Previous Button */}
+      <button
+        onClick={handlePrev}
+        className="absolute left-4 sm:left-6 lg:left-8 top-1/2 transform -translate-y-1/2 z-40 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
+      </button>
+
+      {/* Next Button */}
+      <button
+        onClick={handleNext}
+        className="absolute right-4 sm:right-6 lg:right-8 top-1/2 transform -translate-y-1/2 z-40 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
+      </button>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 flex gap-3 z-40">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              current === index
+                ? "bg-white w-8"
+                : "bg-white/50 hover:bg-white/70 w-3"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-40">
+        <div className="w-6 h-10 border-2 border-white/70 rounded-full flex justify-center">
+          <div className="w-1 h-2 bg-white rounded-full mt-2 animate-pulse"></div>
         </div>
-        <p className="text-white/60 text-xs mt-1 sm:mt-2 text-center hidden sm:block">Scroll to explore</p>
       </div>
     </section>
   )
