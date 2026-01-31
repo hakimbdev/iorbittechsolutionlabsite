@@ -100,7 +100,7 @@ export default function Home() {
       {/* Hero Section with Slider - Mobile Optimized */}
       <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen w-full overflow-hidden">
         {/* Carousel Background */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 hero-carousel">
           <Carousel
             setApi={setApi}
             className="h-full w-full"
@@ -109,9 +109,9 @@ export default function Home() {
               loop: true,
             }}
           >
-            <CarouselContent className="h-full">
+            <CarouselContent className="h-full ml-0" data-carousel-container="true">
               {heroImages.map((image, index) => (
-                <CarouselItem key={index} className="h-full">
+                <CarouselItem key={index} className="h-full pl-0 basis-full" data-carousel-item="true">
                   <div className="relative h-full w-full">
                     <Image
                       src={image.url}

@@ -370,3 +370,19 @@
     outline-offset: 2px;
   }
 }
+
+/* Hero Carousel Fixes */
+@layer components {
+  /* Ensure carousel takes full height */
+  .hero-carousel [data-carousel-viewport] {
+    height: 100% !important;
+  }
+
+  .hero-carousel [data-carousel-container] {
+    height: 100% !important;
+  }
+
+  .hero-carousel [data-carousel-item] {
+    height: 100% !important;
+  }
+}
