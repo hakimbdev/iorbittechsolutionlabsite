@@ -99,47 +99,44 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Hero Section with Slider - Mobile Optimized */}
       <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen w-full overflow-hidden">
-        <Carousel
-          setApi={setApi}
-          className="h-full w-full"
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-        >
-          <CarouselContent className="h-full">
-            {heroImages.map((image, index) => (
-              <CarouselItem key={index} className="h-full">
-                <div className="relative h-full w-full">
-                  <Image
-                    src={image.url}
-                    alt={image.alt}
-                    fill
-                    priority={index === 0}
-                    quality={100}
-                    className="object-cover"
-                    sizes="100vw"
-                    style={{
-                      objectFit: 'cover',
-                      objectPosition: 'center',
-                      width: '100%',
-                      height: '100%'
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-black/50" />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
+        {/* Carousel Background */}
+        <div className="absolute inset-0 z-0">
+          <Carousel
+            setApi={setApi}
+            className="h-full w-full"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+          >
+            <CarouselContent className="h-full">
+              {heroImages.map((image, index) => (
+                <CarouselItem key={index} className="h-full">
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={image.url}
+                      alt={image.alt}
+                      fill
+                      priority={index === 0}
+                      quality={100}
+                      className="object-cover"
+                      sizes="100vw"
+                    />
+                    <div className="absolute inset-0 bg-black/50" />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
 
-          {/* Navigation Arrows - Hidden on mobile */}
-          <CarouselPrevious className="hidden sm:flex left-2 sm:left-4 h-10 w-10 sm:h-12 sm:w-12 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm" />
-          <CarouselNext className="hidden sm:flex right-2 sm:right-4 h-10 w-10 sm:h-12 sm:w-12 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm" />
-        </Carousel>
+            {/* Navigation Arrows - Hidden on mobile */}
+            <CarouselPrevious className="hidden sm:flex left-2 sm:left-4 h-10 w-10 sm:h-12 sm:w-12 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm z-20" />
+            <CarouselNext className="hidden sm:flex right-2 sm:right-4 h-10 w-10 sm:h-12 sm:w-12 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm z-20" />
+          </Carousel>
+        </div>
 
         {/* Content Overlay - Mobile Responsive */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-4">
-          <div className="mx-auto max-w-7xl w-full text-center sm:px-6 lg:px-8 pointer-events-auto">
+        <div className="absolute inset-0 z-10 flex items-center justify-center px-4">
+          <div className="mx-auto max-w-7xl w-full text-center sm:px-6 lg:px-8">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white px-2">
               Iorbit Tech Solutions Lab
             </h1>
@@ -164,7 +161,7 @@ export default function Home() {
         </div>
 
         {/* Slide Indicators - Mobile Optimized */}
-        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 sm:gap-3 z-10">
+        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 sm:gap-3 z-20">
           {heroImages.map((_, index) => (
             <button
               key={index}
