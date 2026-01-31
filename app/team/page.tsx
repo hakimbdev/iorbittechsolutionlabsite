@@ -21,7 +21,7 @@ const founders = [
   },
   {
     name: "Mr. AI",
-    role: "AI Solutions Architect",
+    role: "Operational Assistant",
     image: "https://res.cloudinary.com/da8ptobvx/image/upload/v1769819812/ImageForArticle_270_45642854902789357942_mfcniq.webp",
     bio: "Artificial Intelligence specialist focused on developing cutting-edge AI solutions and machine learning models. Dedicated to pushing the boundaries of what's possible with AI technology.",
     linkedin: "https://www.linkedin.com/company/iorbit-tech-solutions-lab/",
