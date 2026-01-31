@@ -83,6 +83,63 @@ export default function P4TSPage() {
           </div>
         </div>
 
+        {/* Gallery Section */}
+        <div className="mb-16">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {/* Gallery Image 1 */}
+            <div className="relative h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+              <Image
+                src="https://res.cloudinary.com/dc5qncppu/image/upload/v1769880698/plastic-waste_thinif.jpg"
+                alt="Plastic Waste Collection"
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <p className="text-white font-semibold">Plastic Waste Collection</p>
+              </div>
+            </div>
+
+            {/* Gallery Image 2 */}
+            <div className="relative h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+              <Image
+                src="https://res.cloudinary.com/dc5qncppu/image/upload/v1769880412/photorealistic-water-bottle_gko5xe.jpg"
+                alt="Recyclable Water Bottle"
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <p className="text-white font-semibold">Recyclable Materials</p>
+              </div>
+            </div>
+
+            {/* Gallery Image 3 */}
+            <div className="relative h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+              <Image
+                src="https://res.cloudinary.com/dc5qncppu/image/upload/v1769880410/top-view-plastic-bottles_resized_zibicg.jpg"
+                alt="Plastic Bottles"
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <p className="text-white font-semibold">Plastic Exchange Program</p>
+              </div>
+            </div>
+
+            {/* Gallery Image 4 */}
+            <div className="relative h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+              <Image
+                src="https://res.cloudinary.com/dc5qncppu/image/upload/v1769880410/rock-technology-wallpaper-preview_slrofi.jpg"
+                alt="Tech Skills Training"
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <p className="text-white font-semibold">Tech Skills Training</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Program Benefits */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-8">
