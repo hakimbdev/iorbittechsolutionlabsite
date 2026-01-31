@@ -134,8 +134,17 @@ export default function P4TSPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
+              href="https://forms.gle/A94HkPHpeytRXsdU6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-lg text-white bg-green-600 hover:bg-green-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+            >
+              Apply Now
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+            <a
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors duration-200"
+              className="inline-flex items-center justify-center px-8 py-4 border border-green-600 text-base font-bold rounded-lg text-green-600 dark:text-green-400 bg-transparent hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors duration-200"
             >
               Contact Us
               <ArrowRight className="ml-2 h-5 w-5" />
