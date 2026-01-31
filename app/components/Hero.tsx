@@ -86,7 +86,7 @@ export default function Hero() {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-10 text-white/95 leading-relaxed max-w-3xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] font-medium">
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-10 text-white/95 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] font-medium whitespace-nowrap">
           Experience the Revolutionary Software Development Agency
         </p>
 
