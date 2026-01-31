@@ -20,6 +20,19 @@ const founders = [
     ]
   },
   {
+    name: "Mr. AI",
+    role: "AI Solutions Architect",
+    image: "https://res.cloudinary.com/da8ptobvx/image/upload/v1769819812/ImageForArticle_270_45642854902789357942_mfcniq.webp",
+    bio: "Artificial Intelligence specialist focused on developing cutting-edge AI solutions and machine learning models. Dedicated to pushing the boundaries of what's possible with AI technology.",
+    linkedin: "https://www.linkedin.com/company/iorbit-tech-solutions-lab/",
+    email: "ai@iotsl.com.ng",
+    achievements: [
+      "Expert in AI and Machine Learning solutions",
+      "Specialized in LLMs and Generative AI",
+      "Pioneer in AI-driven automation"
+    ]
+  },
+  {
     name: "Ilham Maaruf",
     role: "Brand Analyst",
     image: "https://res.cloudinary.com/dc5qncppu/image/upload/v1748276042/1747071940377_mwdn27.jpg",
