@@ -8,6 +8,33 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const gitexStories = [
   {
     id: 1,
+    title: "Innovation & Technology Showcase 2026",
+    location: "Abuja, Nigeria",
+    date: "January 2026",
+    description: "Iorbit Tech Solutions Lab presenting cutting-edge AI and software engineering innovations at our latest technology showcase event.",
+    image: "https://res.cloudinary.com/dc5qncppu/image/upload/v1769758117/1769320988542_bqo3zj.png",
+    category: "Innovation"
+  },
+  {
+    id: 2,
+    title: "Digital Transformation Summit 2026",
+    location: "Lagos, Nigeria",
+    date: "January 2026",
+    description: "Leading discussions on digital transformation and showcasing our revolutionary software development solutions to industry leaders.",
+    image: "https://res.cloudinary.com/dc5qncppu/image/upload/v1769758090/1769321003418_cmjo5z.png",
+    category: "Tech Event"
+  },
+  {
+    id: 3,
+    title: "Tech Innovation Conference 2026",
+    location: "Nigeria",
+    date: "January 2026",
+    description: "Demonstrating our comprehensive technology solutions and building partnerships with forward-thinking organizations.",
+    image: "https://res.cloudinary.com/dc5qncppu/image/upload/v1769756149/ChatGPT_Image_Jan_29_2026_07_49_47_AM_hdnizt.png",
+    category: "Innovation"
+  },
+  {
+    id: 4,
     title: "GITEX Tech Event 2025 - Abuja",
     location: "Abuja, Nigeria",
     date: "2025",
@@ -16,25 +43,25 @@ const gitexStories = [
     category: "Tech Event"
   },
   {
-    id: 2,
+    id: 5,
     title: "Innovation Showcase - GITEX 2025",
-    location: "Abuja, Nigeria", 
+    location: "Abuja, Nigeria",
     date: "2025",
     description: "Demonstrating cutting-edge cybersecurity solutions and data analysis capabilities to industry leaders and potential partners.",
     image: "https://res.cloudinary.com/da8ptobvx/image/upload/v1758051492/uraz_lhp5te.jpg",
     category: "Innovation"
   },
   {
-    id: 3,
+    id: 6,
     title: "Partnership Networking - GITEX",
     location: "Victoria Island, Lagos",
-    date: "2025", 
+    date: "2025",
     description: "Building strategic partnerships and exploring collaboration opportunities with technology companies and government agencies.",
     image: "https://res.cloudinary.com/da8ptobvx/image/upload/v1758051488/1000004560_x3qhjg.jpg",
     category: "Networking"
   },
   {
-    id: 4,
+    id: 7,
     title: "Tech Leadership Summit",
     location: "Abuja, Nigeria",
     date: "2025",
@@ -43,16 +70,16 @@ const gitexStories = [
     category: "Leadership"
   },
   {
-    id: 5,
+    id: 8,
     title: "GITEX Exhibition Floor",
-    location: "Victoria Island, Lagos", 
+    location: "Victoria Island, Lagos",
     date: "2025",
     description: "Our exhibition booth attracting visitors interested in our comprehensive software engineering and partnership services.",
     image: "https://res.cloudinary.com/da8ptobvx/image/upload/v1758051487/1000023287_vbnadr.jpg",
     category: "Exhibition"
   },
   {
-    id: 6,
+    id: 9,
     title: "Technology Demonstrations",
     location: "Abuja, Nigeria",
     date: "2025",

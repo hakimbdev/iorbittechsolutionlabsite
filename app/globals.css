@@ -371,18 +371,10 @@
   }
 }
 
-/* Hero Carousel Fixes */
+/* Hero Carousel - Ensure full height */
 @layer components {
-  /* Ensure carousel takes full height */
-  .hero-carousel [data-carousel-viewport] {
-    height: 100% !important;
-  }
-
-  .hero-carousel [data-carousel-container] {
-    height: 100% !important;
-  }
-
-  .hero-carousel [data-carousel-item] {
-    height: 100% !important;
+  /* Make carousel viewport take full height */
+  [data-carousel-viewport] {
+    height: 100%;
   }
 }

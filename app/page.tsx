@@ -100,39 +100,37 @@ export default function Home() {
       {/* Hero Section with Slider - Mobile Optimized */}
       <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen w-full overflow-hidden">
         {/* Carousel Background */}
-        <div className="absolute inset-0 z-0 hero-carousel">
-          <Carousel
-            setApi={setApi}
-            className="h-full w-full"
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-          >
-            <CarouselContent className="h-full ml-0" data-carousel-container="true">
-              {heroImages.map((image, index) => (
-                <CarouselItem key={index} className="h-full pl-0 basis-full" data-carousel-item="true">
-                  <div className="relative h-full w-full">
-                    <Image
-                      src={image.url}
-                      alt={image.alt}
-                      fill
-                      priority={index === 0}
-                      quality={100}
-                      className="object-cover"
-                      sizes="100vw"
-                    />
-                    <div className="absolute inset-0 bg-black/50" />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
+        <Carousel
+          setApi={setApi}
+          className="absolute inset-0"
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
+          <CarouselContent className="h-full -ml-0">
+            {heroImages.map((image, index) => (
+              <CarouselItem key={index} className="h-full pl-0 basis-full">
+                <div className="relative h-full w-full">
+                  <Image
+                    src={image.url}
+                    alt={image.alt}
+                    fill
+                    priority={index === 0}
+                    quality={100}
+                    className="object-cover"
+                    sizes="100vw"
+                  />
+                  <div className="absolute inset-0 bg-black/50" />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
 
-            {/* Navigation Arrows - Hidden on mobile */}
-            <CarouselPrevious className="hidden sm:flex left-2 sm:left-4 h-10 w-10 sm:h-12 sm:w-12 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm z-20" />
-            <CarouselNext className="hidden sm:flex right-2 sm:right-4 h-10 w-10 sm:h-12 sm:w-12 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm z-20" />
-          </Carousel>
-        </div>
+          {/* Navigation Arrows - Hidden on mobile */}
+          <CarouselPrevious className="hidden sm:flex left-2 sm:left-4 h-10 w-10 sm:h-12 sm:w-12 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm" />
+          <CarouselNext className="hidden sm:flex right-2 sm:right-4 h-10 w-10 sm:h-12 sm:w-12 bg-white/10 hover:bg-white/20 border-white/30 text-white backdrop-blur-sm" />
+        </Carousel>
 
         {/* Content Overlay - Mobile Responsive */}
         <div className="absolute inset-0 z-10 flex items-center justify-center px-4">
