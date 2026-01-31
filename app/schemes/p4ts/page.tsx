@@ -142,13 +142,6 @@ export default function P4TSPage() {
               Apply Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 border border-green-600 text-base font-bold rounded-lg text-green-600 dark:text-green-400 bg-transparent hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors duration-200"
-            >
-              Contact Us
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
           </div>
         </div>
 
