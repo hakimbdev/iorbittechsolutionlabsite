@@ -33,13 +33,13 @@ const programs = [
   {
     name: "Plastic For Tech Skills (P4TS)",
     description: "Exchange collected plastic waste for comprehensive technology training and professional development.",
-    link: "/schemes/p4ts",
+    link: "/Projects/p4ts",
     highlights: ["Hands-on training", "Industry certifications", "Job placement support"]
   },
   {
     name: "Skills For Impact Sponsorship (S4IS)",
     description: "Sponsored technology education for deserving candidates committed to creating sustainable impact.",
-    link: "/schemes/s4is",
+    link: "/Projects/s4is",
     highlights: ["Sponsored education", "Mentorship program", "Career guidance"]
   }
 ]
@@ -72,13 +72,13 @@ export default function Trash4TechPage() {
                 Bridging the gap between environmental sustainability and technological innovation. Transform plastic waste into skills, opportunities, and meaningful careers.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/schemes/p4ts">
+                <Link href="/Projects/p4ts">
                   <Button className="bg-white text-emerald-600 hover:bg-emerald-50 px-8 py-6 text-lg font-bold rounded-lg shadow-xl w-full sm:w-auto">
                     Explore P4TS
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Link href="/schemes/s4is">
+                <Link href="/Projects/s4is">
                   <Button className="bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-6 text-lg font-bold rounded-lg shadow-xl border border-emerald-500 backdrop-blur-sm w-full sm:w-auto">
                     Learn About S4IS
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -339,12 +339,12 @@ export default function Trash4TechPage() {
             Be part of a global initiative transforming waste into opportunities. Choose your path and start your journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/schemes/p4ts">
+            <Link href="/Projects/p4ts">
               <Button className="bg-white text-emerald-600 hover:bg-emerald-50 px-8 py-6 font-bold rounded-lg shadow-lg w-full sm:w-auto">
                 Start with P4TS
               </Button>
             </Link>
-            <Link href="/schemes/s4is">
+            <Link href="/Projects/s4is">
               <Button className="bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-6 font-bold rounded-lg shadow-lg border border-emerald-500 w-full sm:w-auto">
                 Explore S4IS
               </Button>

@@ -10,17 +10,17 @@ const navigation = [
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   {
-    name: "Schemes",
+    name: "Projects",
     href: "#",
     subItems: [
       {
         name: "Trash4Tech",
         href: "#",
         subItems: [
-          { name: "Plastic For Tech Skills (P4TS)", href: "/schemes/p4ts" }
+          { name: "Plastic For Tech Skills (P4TS)", href: "/Projects/p4ts" }
         ]
       },
-      { name: "Skills For Impact Sponsorship (S4IS)", href: "/schemes/s4is" }
+      { name: "Skills For Impact Sponsorship (S4IS)", href: "/Projects/s4is" }
     ]
   },
   { name: "Stories", href: "/stories" },
