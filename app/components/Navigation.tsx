@@ -13,7 +13,13 @@ const navigation = [
     name: "Schemes",
     href: "#",
     subItems: [
-      { name: "Plastic For Tech Skills (P4TS)", href: "/schemes/p4ts" },
+      {
+        name: "Trash4Tech",
+        href: "#",
+        subItems: [
+          { name: "Plastic For Tech Skills (P4TS)", href: "/schemes/p4ts" }
+        ]
+      },
       { name: "Skills For Impact Sponsorship (S4IS)", href: "/schemes/s4is" }
     ]
   },
@@ -26,6 +32,7 @@ const navigation = [
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [openNestedDropdown, setOpenNestedDropdown] = useState<string | null>(null)
 
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md dark:bg-gray-900/80 shadow-sm">
@@ -56,13 +63,41 @@ export default function Navigation() {
                         <div className="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5">
                           <div className="py-1">
                             {item.subItems.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                href={subItem.href}
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
-                              >
-                                {subItem.name}
-                              </Link>
+                              <div key={subItem.name} className="relative">
+                                {subItem.subItems ? (
+                                  <div
+                                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 cursor-default"
+                                    onMouseEnter={() => setOpenNestedDropdown(subItem.name)}
+                                    onMouseLeave={() => setOpenNestedDropdown(null)}
+                                  >
+                                    <span>{subItem.name}</span>
+                                    <ChevronDown className="ml-2 h-4 w-4 rotate-90" />
+
+                                    {openNestedDropdown === subItem.name && (
+                                      <div className="absolute left-full top-0 mt-0 ml-1 w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5">
+                                        <div className="py-1">
+                                          {subItem.subItems.map((nested) => (
+                                            <Link
+                                              key={nested.name}
+                                              href={nested.href}
+                                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
+                                            >
+                                              {nested.name}
+                                            </Link>
+                                          ))}
+                                        </div>
+                                      </div>
+                                    )}
+                                  </div>
+                                ) : (
+                                  <Link
+                                    href={subItem.href}
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
+                                  >
+                                    {subItem.name}
+                                  </Link>
+                                )}
+                              </div>
                             ))}
                           </div>
                         </div>
@@ -121,14 +156,42 @@ export default function Navigation() {
                   {openDropdown === item.name && (
                     <div className="pl-4 space-y-1">
                       {item.subItems.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="block rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {subItem.name}
-                        </Link>
+                        <div key={subItem.name}>
+                          {subItem.subItems ? (
+                            <div>
+                              <button
+                                onClick={() => setOpenNestedDropdown(openNestedDropdown === subItem.name ? null : subItem.name)}
+                                className="w-full flex items-center justify-between rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
+                              >
+                                {subItem.name}
+                                <ChevronDown className={`h-4 w-4 transition-transform ${openNestedDropdown === subItem.name ? 'rotate-180' : ''}`} />
+                              </button>
+                              {openNestedDropdown === subItem.name && (
+                                <div className="pl-4 space-y-1">
+                                  {subItem.subItems.map((nested) => (
+                                    <Link
+                                      key={nested.name}
+                                      href={nested.href}
+                                      className="block rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
+                                      onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                      {nested.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          ) : (
+                            <Link
+                              key={subItem.name}
+                              href={subItem.href}
+                              className="block rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {subItem.name}
+                            </Link>
+                          )}
+                        </div>
                       ))}
                     </div>
                   )}

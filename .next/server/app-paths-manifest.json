@@ -1,4 +1,4 @@
 {
-  "/page": "app/page.js",
-  "/schemes/p4ts/page": "app/schemes/p4ts/page.js"
+  "/schemes/p4ts/page": "app/schemes/p4ts/page.js",
+  "/page": "app/page.js"
 }
