@@ -176,7 +176,7 @@ export default function RoboticsPage() {
             <div className="grid gap-6 sm:grid-cols-3 text-center mb-8">
               <div>
                 <div className="text-3xl font-bold text-purple-600 mb-2">100+</div>
-                <div className="text-gray-600 dark:text-gray-300">AI Projects</div>
+                <div className="text-gray-600 dark:text-gray-300">AI Schemes</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-purple-600 mb-2">50+</div>

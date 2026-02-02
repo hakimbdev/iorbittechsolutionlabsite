@@ -135,7 +135,7 @@ export default function PrivacyPolicyPage() {
               <div className="text-gray-600 dark:text-gray-300 space-y-4">
                 <p><strong>Personal Information:</strong> Name, email address, phone number, company information, and professional details when you contact us or use our services.</p>
                 <p><strong>Technical Information:</strong> IP address, browser type, device information, and usage data to improve our services and security.</p>
-                <p><strong>Service Data:</strong> Information related to cybersecurity assessments, data analysis projects, and software development requirements.</p>
+                <p><strong>Service Data:</strong> Information related to cybersecurity assessments, data analysis Schemes, and software development requirements.</p>
               </div>
             </section>
 
@@ -145,7 +145,7 @@ export default function PrivacyPolicyPage() {
                 <p>We use your information to:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Provide cybersecurity, data analysis, and software engineering services</li>
-                  <li>Communicate about projects, updates, and partnership opportunities</li>
+                  <li>Communicate about Schemes, updates, and partnership opportunities</li>
                   <li>Improve our services and develop new solutions</li>
                   <li>Comply with legal obligations and maintain security</li>
                   <li>Process payments and manage client relationships</li>

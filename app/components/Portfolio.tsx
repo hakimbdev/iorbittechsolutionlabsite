@@ -5,7 +5,7 @@ import Image from "next/image"
 import { ExternalLink, Github, Award, TrendingUp, Users, Zap } from "lucide-react"
 import { useState } from "react"
 
-const projects = [
+const Schemes = [
   {
     title: "AI-Powered Learning Ecosystem",
     description:
@@ -99,7 +99,7 @@ export default function Portfolio() {
 
         {/* Portfolio Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {projects.map((project, index) => (
+          {Schemes.map((project, index) => (
             <Card
               key={index}
               className="group relative overflow-hidden border-0 bg-white/90 backdrop-blur-xl shadow-2xl hover:shadow-3xl transition-all duration-700 hover:scale-[1.02] cursor-pointer"
@@ -190,7 +190,7 @@ export default function Portfolio() {
         <div className="text-center mt-20">
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer group">
             <Award className="w-5 h-5 mr-3 group-hover:animate-pulse" />
-            View All Projects
+            View All Schemes
             <ExternalLink className="w-5 h-5 ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
           </div>
         </div>

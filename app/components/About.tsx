@@ -3,7 +3,7 @@ import { Users, Award, Globe, Zap } from "lucide-react"
 
 const stats = [
   { icon: Users, label: "Team Members", value: "50+" },
-  { icon: Award, label: "Projects Completed", value: "200+" },
+  { icon: Award, label: "Schemes Completed", value: "200+" },
   { icon: Globe, label: "Countries Served", value: "25+" },
   { icon: Zap, label: "Years of Experience", value: "10+" },
 ]
