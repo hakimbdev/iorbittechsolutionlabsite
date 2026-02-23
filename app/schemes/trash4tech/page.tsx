@@ -31,7 +31,7 @@ const features = [
 
 const programs = [
   {
-    name: "Plastic For Tech Skills (P4TS)",
+    name: "Trash4Tech",
     description: "Exchange collected plastic waste for comprehensive technology training and professional development.",
     link: "/Schemes/p4ts",
     highlights: ["Hands-on training", "Industry certifications", "Job placement support"]
@@ -74,7 +74,7 @@ export default function Trash4TechPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/Schemes/p4ts">
                   <Button className="bg-white text-emerald-600 hover:bg-emerald-50 px-8 py-6 text-lg font-bold rounded-lg shadow-xl w-full sm:w-auto">
-                    Explore P4TS
+                    Explore Trash4Tech
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
@@ -341,7 +341,7 @@ export default function Trash4TechPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/Schemes/p4ts">
               <Button className="bg-white text-emerald-600 hover:bg-emerald-50 px-8 py-6 font-bold rounded-lg shadow-lg w-full sm:w-auto">
-                Start with P4TS
+                Start with Trash4Tech
               </Button>
             </Link>
             <Link href="/Schemes/s4is">

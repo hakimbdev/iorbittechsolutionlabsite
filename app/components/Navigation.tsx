@@ -13,7 +13,7 @@ const navigation = [
     name: "Schemes",
     href: "#",
     subItems: [
-      { name: "Plastic For Tech Skills (P4TS)", href: "/schemes/p4ts" },
+      { name: "Trash4Tech", href: "/schemes/p4ts" },
       { name: "Skills For Impact Sponsorship (S4IS)", href: "/Schemes/s4is" }
     ]
   },

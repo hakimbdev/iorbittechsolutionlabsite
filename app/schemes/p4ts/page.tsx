@@ -45,7 +45,7 @@ export default function P4TSPage() {
           <div className="text-center">
             <Recycle className="mx-auto h-16 w-16 mb-6" />
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Plastic For Tech Skills (P4TS)
+              Trash4Tech
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-xl text-green-100">
               Transform plastic waste into valuable tech skills. Exchange recyclable plastics for comprehensive technology training and build a sustainable future.
@@ -62,7 +62,7 @@ export default function P4TSPage() {
             <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="https://res.cloudinary.com/da8ptobvx/image/upload/v1769814635/ChatGPT_Image_Jan_29_2026_07_49_47_AM_flnnw1.png"
-                alt="Plastic For Tech Skills Program"
+                alt="Trash4Tech Program"
                 fill
                 className="object-cover"
               />
@@ -74,7 +74,7 @@ export default function P4TSPage() {
                 About the Program
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                Plastic For Tech Skills (P4TS) Program bridges these two issues by allowing participants to exchange collected plastic waste for access to quality tech training.
+                Trash4Tech Program bridges these two issues by allowing participants to exchange collected plastic waste for access to quality tech training.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300">
                 This approach creates a sustainable, socially impactful, and environmentally conscious learning model.
@@ -187,7 +187,7 @@ export default function P4TSPage() {
             Ready to Get Started?
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join the P4TS program today and start your journey toward a rewarding tech career while making a positive environmental impact.
+            Join the Trash4Tech program today and start your journey toward a rewarding tech career while making a positive environmental impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
