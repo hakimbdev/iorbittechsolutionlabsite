@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
@@ -60,16 +59,14 @@ export default function Hero() {
             className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
               index === current ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
+            onMouseEnter={() => setAutoPlay(false)}
+            onMouseLeave={() => setAutoPlay(true)}
           >
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={image.url}
               alt={image.alt}
-              fill
-              priority={index === 0}
               className="w-full h-full object-cover"
-              sizes="100vw"
-              onMouseEnter={() => setAutoPlay(false)}
-              onMouseLeave={() => setAutoPlay(true)}
             />
           </div>
         ))}
