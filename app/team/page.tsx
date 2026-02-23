@@ -7,12 +7,12 @@ import { Github, Linkedin, Mail } from 'lucide-react'
 const founders = [
   {
     name: "Abdulhakim Ahmad",
-    role: "Founder & Lead Technologist",
-    image: "https://res.cloudinary.com/dc5qncppu/image/upload/v1748265942/pp1_ek8kwj.jpg",
+    role: "Founder & Digital Inclusion Innovator",
+    image: "https://res.cloudinary.com/ddgtxaels/image/upload/v1771837735/Gemini_Generated_Image_smyia5smyia5smyi_on0xrq.png",
     bio: "Software Engineer with expertise in AI, React, Node.js, and cloud technologies. Passionate about creating innovative solutions and leading teams to success.",
     github: "https://github.com/hakimbdev",
     linkedin: "https://www.linkedin.com/in/abdulhakim-ahmad-413b2514b/",
-    email: "ceo@iorbitlab.africa",
+    email: "abdulhakim@iotsl.com.ng",
     achievements: [
       "Led development of multiple enterprise applications",
       "Expert in cloud architecture and deployment",
@@ -38,7 +38,7 @@ const founders = [
     image: "https://res.cloudinary.com/dc5qncppu/image/upload/v1748276042/1747071940377_mwdn27.jpg",
     bio: "Expertize inData Analytics and Marketing",
     linkedin: "https://www.linkedin.com/in/ilham-maaruf/",
-    email: "ilham@iots.com",
+    email: "ilham@iotsl.com.ng",
     achievements: [
       "Marketing Specialist"
     ]
@@ -49,7 +49,7 @@ const founders = [
     image: "https://res.cloudinary.com/dc5qncppu/image/upload/v1746365263/5_rr2jvv.jpg",
     bio: "Frontend Developer with expertise in React, TypeScript, and UI/UX design. Dedicated to creating beautiful and intuitive user experiences.",
     linkedin: "https://www.linkedin.com/in/adam-abdullahi-bala-655983124/",
-    email: "adamubala@iots.com",
+    email: "adamubala@iotsl.com.ng",
     achievements: [
       "TypeScript and React expert",
       "Passionate about accessibility and UX"
